@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QuickBracket</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_torneo">Torneo</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="tv_bienvenida">Bienvenido a QuickBracket</string>
+    <string name="tv_no_torneos">No tienes torneos activos de momento, crea uno ahora mismo!</string>
+    <string name="btn_crear_torneo">Crear Torneo</string>
+
+</resources>
