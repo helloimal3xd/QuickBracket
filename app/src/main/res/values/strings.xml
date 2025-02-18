@@ -7,5 +7,27 @@
     <string name="tv_bienvenida">Bienvenido a QuickBracket</string>
     <string name="tv_no_torneos">No tienes torneos activos de momento, crea uno ahora mismo!</string>
     <string name="btn_crear_torneo">Crear Torneo</string>
+    <string name="tv_nombreTorneo">Nombre del torneo</string>
+    <string name="btn_siguiente">Siguiente</string>
+    <string name="tv_cantidadJugarores">Cantidad de jugadores por equipo</string>
+    <string name="tv_seleccion">Seleccione el juego</string>
+    <string name="hint_nombreTorneo">ej: Fire and Ice</string>
+
+    <string-array name="lista_juegos">
+        <item>League of Legends</item>
+        <item>Valorant</item>
+        <item>Counter-Strike 2</item>
+        <item>Rocket League</item>
+        <item>FIFA 24</item>
+    </string-array>
+
+    <string-array name="cantidad_jugadores">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
 
 </resources>

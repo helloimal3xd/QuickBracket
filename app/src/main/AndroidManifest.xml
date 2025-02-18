@@ -28,6 +28,13 @@
             android:exported="true"
             android:theme="@style/Theme.QuickBracket"
             />
+
+        <activity
+            android:name=".RegistrarEquiposActivity"
+            android:exported="true"
+            android:theme="@style/Theme.QuickBracket"
+            tools:ignore="Instantiatable" />
+
     </application>
 
 </manifest>
