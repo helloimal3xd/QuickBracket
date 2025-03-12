@@ -12,6 +12,9 @@
     <string name="tv_cantidadJugarores">Cantidad de jugadores por equipo</string>
     <string name="tv_seleccion">Seleccione el juego</string>
     <string name="hint_nombreTorneo">ej: Fire and Ice</string>
+    <string name="tv_infojugadores">Cada equipo debe tener X jugadores</string>
+    <string name="hint_nombre_equipo">Nombre del equipo</string>
+    <string name="btn_agregar">Agregar</string>
 
     <string-array name="lista_juegos">
         <item>League of Legends</item>
