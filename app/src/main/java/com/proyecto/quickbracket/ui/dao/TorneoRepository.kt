@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 
 class TorneoRepository (private val torneoDao: TorneoDao){
 
-    val torneosActivos : LiveData<List<TorneoEntity>> = torneoDao.obtenerTorneosActivos()
+    val torneosActivos : LiveData<List<Torneo>> = torneoDao.obtenerTorneosActivos()
 
-    suspend fun insertarTorneo(torneo: TorneoEntity){
+    suspend fun insertarTorneo(torneo: Torneo){
         torneoDao.insertarTorneo(torneo)
     }
 }

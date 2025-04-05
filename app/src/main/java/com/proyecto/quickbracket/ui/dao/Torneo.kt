@@ -4,11 +4,12 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "torneos")
-data class TorneoEntity (
+data class Torneo (
 
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val nombre: String,
     val fecha: String,
-    val estado: String
+    val estado: String,
+    val equipos: List<String>
 
 )

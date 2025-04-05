@@ -13,4 +13,7 @@
     <color name="azul_oscuro">#1A1A2E</color>
     <color name="azul_profundo">#0F3460</color>
     <color name="azul_negro">#141E30</color>
+    <color name="gris">#606770</color>
+    <color name="logo_pink">#570037</color>
+    <color name="logo_blue">#004B57</color>
 </resources>

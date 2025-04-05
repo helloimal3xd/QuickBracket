@@ -7,6 +7,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.proyecto.quickbracket.databinding.ActivityRegistrarEquiposBinding
+import com.proyecto.quickbracket.ui.brackets.BracketActivity
 import com.proyecto.quickbracket.ui.dao.Equipo
 import com.proyecto.quickbracket.ui.dao.EquipoAdapter
 
@@ -48,7 +49,10 @@ class RegistrarEquiposActivity: AppCompatActivity() {
             .setMessage("Se han registrado ${listaEquipos.size} equipos. ¿Desea continuar?")
             .setPositiveButton("Sí") { _, _ ->
                 Toast.makeText(this, "Guardando...", Toast.LENGTH_SHORT).show()
-                val intent = android.content.Intent(this, MainActivity::class.java)
+                val intent = android.content.Intent(this, BracketActivity::class.java)
+                val equipos = listaEquipos.map { it.nombre }
+                intent.putStringArrayListExtra("equipos", ArrayList(equipos))
+                startActivity(intent)
             }
             .setNegativeButton("No", null)
             .show()

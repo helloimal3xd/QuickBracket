@@ -15,6 +15,13 @@
     <string name="tv_infojugadores">Cada equipo debe tener X jugadores</string>
     <string name="hint_nombre_equipo">Nombre del equipo</string>
     <string name="btn_agregar">Agregar</string>
+    <string name="et_correo">correo electronico</string>
+    <string name="et_contrasena">contraseña</string>
+    <string name="btn_Iniciar_Sesion">"Iniciar Sesion "</string>
+    <string name="btn_registro">Registrate!</string>
+    <string name="tv_opcion">no tienes una cuenta?</string>
+    <string name="et_constrasena2">confirmar contraseña</string>
+    <string name="tv_tituloRegistro">Primera vez por aqui eh? Registrate!</string>
 
     <string-array name="lista_juegos">
         <item>League of Legends</item>

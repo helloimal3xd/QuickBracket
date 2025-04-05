@@ -10,10 +10,10 @@ import androidx.room.Query
 interface TorneoDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertarTorneo(torneo: TorneoEntity)
+    suspend fun insertarTorneo(torneo: Torneo)
 
     @Query("SELECT * FROM torneos WHERE estado = 'activo'")
-    fun obtenerTorneosActivos(): LiveData<List<TorneoEntity>>
+    fun obtenerTorneosActivos(): LiveData<List<Torneo>>
 
 
 }

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.QuickBracket"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             >
             <intent-filter>
@@ -23,6 +23,16 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".RegistroActivity"
+            android:exported="true"
+            android:theme="@style/Theme.QuickBracket"
+            />
+
+        <activity android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.QuickBracket"
+            />
+
         <activity
             android:name=".CrearTorneoActivity"
             android:exported="true"
@@ -31,6 +41,11 @@
 
         <activity
             android:name=".RegistrarEquiposActivity"
+            android:exported="true"
+            android:theme="@style/Theme.QuickBracket"
+            tools:ignore="Instantiatable" />
+
+        <activity android:name=".ui.brackets.BracketActivity"
             android:exported="true"
             android:theme="@style/Theme.QuickBracket"
             tools:ignore="Instantiatable" />
