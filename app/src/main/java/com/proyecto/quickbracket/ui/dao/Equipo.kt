@@ -1,10 +1,7 @@
 package com.proyecto.quickbracket.ui.dao
 
-import androidx.room.PrimaryKey
-
-data class Equipo (
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+data class Equipo(
     val nombre: String,
-    val cantidadJugadores: Int
-
+    val cantidadJugadores: Int,
+    val jugadores: List<String>
 )

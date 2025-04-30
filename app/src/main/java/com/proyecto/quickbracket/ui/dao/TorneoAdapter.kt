@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.proyecto.quickbracket.databinding.ItemTorneoBinding
 import com.proyecto.quickbracket.ui.brackets.BracketActivity
+import java.util.Locale
 
 class TorneoAdapter(private var listaTorneos: List<Torneo>) :
     RecyclerView.Adapter<TorneoAdapter.TorneoViewHolder>() {
@@ -21,12 +22,17 @@ class TorneoAdapter(private var listaTorneos: List<Torneo>) :
     override fun onBindViewHolder(holder: TorneoViewHolder, position: Int) {
         val torneo = listaTorneos[position]
         holder.binding.tvNombreTorneo.text = torneo.nombre
+        holder.binding.tvEstado.text = torneo.estado
 
-        // Manejar el clic en el torneo para abrir BracketActivity
+        val sdf = java.text.SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val fechaFormateada = sdf.format(torneo.fecha)
+        holder.binding.tvFechaTorneo.text = fechaFormateada
+
+
         holder.binding.root.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, BracketActivity::class.java)
-            intent.putStringArrayListExtra("equipos", ArrayList(torneo.equipos))
+            intent.putExtra("torneoId", torneo.id)
             context.startActivity(intent)
         }
     }

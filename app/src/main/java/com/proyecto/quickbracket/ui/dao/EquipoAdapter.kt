@@ -15,6 +15,10 @@ class EquipoAdapter (private val equipos: List<Equipo>):
             fun bind(equipo: Equipo) {
                 binding.tvNombreEquipo.text = equipo.nombre
                 binding.tvCantidadJugadores.text = "Jugadores: ${equipo.cantidadJugadores}"
+
+                // Mostrar nombres de los jugadores como una lista separada por comas
+                val jugadoresTexto = equipo.jugadores.joinToString(separator = ", ")
+                binding.tvJugadores.text = "Nombres: $jugadoresTexto"
             }
         }
 

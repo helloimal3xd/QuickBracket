@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_torneo" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.proyecto.quickbracket.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:id="@+id/navigation_reglas"
+        android:name="com.proyecto.quickbracket.ui.reglas.ReglasFragment"
+        android:label="@string/title_reglas"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

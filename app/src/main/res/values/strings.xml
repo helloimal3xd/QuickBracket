@@ -3,7 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_torneo">Torneo</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_reglas">Reglas</string>
     <string name="tv_bienvenida">Bienvenido a QuickBracket</string>
     <string name="tv_no_torneos">No tienes torneos activos de momento, crea uno ahora mismo!</string>
     <string name="btn_crear_torneo">Crear Torneo</string>
@@ -15,13 +15,17 @@
     <string name="tv_infojugadores">Cada equipo debe tener X jugadores</string>
     <string name="hint_nombre_equipo">Nombre del equipo</string>
     <string name="btn_agregar">Agregar</string>
-    <string name="et_correo">correo electronico</string>
+    <string name="et_correo">correo electrónico</string>
     <string name="et_contrasena">contraseña</string>
-    <string name="btn_Iniciar_Sesion">"Iniciar Sesion "</string>
-    <string name="btn_registro">Registrate!</string>
+    <string name="btn_Iniciar_Sesion">"Iniciar Sesión "</string>
+    <string name="btn_registro">Regístrate!</string>
     <string name="tv_opcion">no tienes una cuenta?</string>
     <string name="et_constrasena2">confirmar contraseña</string>
-    <string name="tv_tituloRegistro">Primera vez por aqui eh? Registrate!</string>
+    <string name="tv_tituloRegistro">Primera vez por aqui eh? Regístrate!</string>
+    <string name="tv_torneos_activos">Torneos Activos</string>
+    <string name="tv_torneos_finalizados">Torneos Finalizados</string>
+    <string name="btn_finalizar_torneo">Finalizar Torneo</string>
+    <string name="tv_estado">Estado</string>
 
     <string-array name="lista_juegos">
         <item>League of Legends</item>

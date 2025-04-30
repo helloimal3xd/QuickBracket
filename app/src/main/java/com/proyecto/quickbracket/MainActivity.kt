@@ -3,7 +3,6 @@ package com.proyecto.quickbracket
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val navController = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main)?.findNavController()
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_trofeo, R.id.navigation_notifications
+                R.id.navigation_home, R.id.navigation_trofeo, R.id.navigation_reglas
             )
         )
         if (navController != null) {
