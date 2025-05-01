@@ -4,8 +4,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.proyecto.quickbracket.DetalleTorneoActivity
 import com.proyecto.quickbracket.databinding.ItemTorneoBinding
-import com.proyecto.quickbracket.ui.brackets.BracketActivity
 import java.util.Locale
 
 class TorneoAdapter(private var listaTorneos: List<Torneo>) :
@@ -29,9 +29,10 @@ class TorneoAdapter(private var listaTorneos: List<Torneo>) :
         holder.binding.tvFechaTorneo.text = fechaFormateada
 
 
+
         holder.binding.root.setOnClickListener {
             val context = holder.itemView.context
-            val intent = Intent(context, BracketActivity::class.java)
+            val intent = Intent(context, DetalleTorneoActivity::class.java)
             intent.putExtra("torneoId", torneo.id)
             context.startActivity(intent)
         }

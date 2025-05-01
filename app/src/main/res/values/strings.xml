@@ -26,6 +26,8 @@
     <string name="tv_torneos_finalizados">Torneos Finalizados</string>
     <string name="btn_finalizar_torneo">Finalizar Torneo</string>
     <string name="tv_estado">Estado</string>
+    <string name="btn_editar_torneo">Editar Torneo</string>
+    <string name="btn_ver_brackets">Ver Brackets</string>
 
     <string-array name="lista_juegos">
         <item>League of Legends</item>

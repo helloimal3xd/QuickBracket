@@ -215,20 +215,17 @@ class BracketActivity : AppCompatActivity() {
             if (snapshot != null && !snapshot.isEmpty) {
                 listaBrackets.clear()
                 for (document in snapshot.documents) {
-                    val bracket = document.getString("ganador")?.let {
-                        Bracket(
+                    val bracket = Bracket(
                             equipo1 = document.getString("equipo1") ?: "",
                             equipo2 = document.getString("equipo2") ?: "",
                             puntosEquipo1 = document.getLong("puntosEquipo1")?.toInt() ?: 0,
                             puntosEquipo2 = document.getLong("puntosEquipo2")?.toInt() ?: 0,
                             ronda = document.getString("ronda") ?: "",
-                            id = document.getString("id") ?: document.id,
-                            ganador = it
-                        )
-                    }
-                    if (bracket != null) {
-                        listaBrackets.add(bracket)
-                    }
+                            id = document.id,
+                            ganador = document.getString("ganador") ?: ""
+                    )
+
+                    listaBrackets.add(bracket)
                 }
                 listaBrackets.sortBy { it.id.toIntOrNull() ?: 0 }
                 adapter.notifyDataSetChanged()
@@ -274,8 +271,7 @@ class BracketActivity : AppCompatActivity() {
                                 "equipo2" to bracket.equipo2,
                                 "puntosEquipo1" to bracket.puntosEquipo1,
                                 "puntosEquipo2" to bracket.puntosEquipo2,
-                                "ronda" to bracket.ronda,
-                                "id" to bracket.id
+                                "ronda" to bracket.ronda
                             )
                             enfrentamientosRef.add(data)
                         }

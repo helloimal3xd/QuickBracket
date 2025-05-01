@@ -50,6 +50,11 @@
             android:theme="@style/Theme.QuickBracket"
             tools:ignore="Instantiatable" />
 
+        <activity android:name=".DetalleTorneoActivity"
+            android:exported="true"
+            android:theme="@style/Theme.QuickBracket"
+            tools:ignore="Instantiatable" />
+
     </application>
 
 </manifest>

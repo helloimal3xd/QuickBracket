@@ -55,6 +55,7 @@
                 adapterFinalizados.actualizarLista(lista)
             }
 
+
             torneoViewModel.cargarTorneos()
 
             return root

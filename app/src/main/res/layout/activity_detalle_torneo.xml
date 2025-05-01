@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv_torneo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/tv_nombreTorneo"
+        android:textSize="20sp"
+        android:fontFamily="@font/orbitron_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_torneo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        android:fontFamily="@font/orbitron_regular"
+        app:layout_constraintStart_toEndOf="@+id/tv_torneo1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_equipos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/orbitron_bold"
+        android:text="Equipos: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fecha1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_equipos"
+        android:layout_width="347dp"
+        android:layout_height="198dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_equipos" />
+
+    <TextView
+        android:id="@+id/tv_estado2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="TextView"
+        android:fontFamily="@font/orbitron_regular"
+        app:layout_constraintStart_toEndOf="@+id/tv_estado1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_jpe1" />
+
+    <TextView
+        android:id="@+id/tv_estado1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/orbitron_bold"
+        android:text="Estado: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_jpe1" />
+
+    <TextView
+        android:id="@+id/tv_jpe1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/orbitron_bold"
+        android:text="Jugadores por equipo: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_juego1" />
+
+    <TextView
+        android:id="@+id/tv_jpe2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/orbitron_regular"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tv_jpe1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_juego1" />
+
+    <TextView
+        android:id="@+id/tv_juego1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/orbitron_bold"
+        android:text="Juego: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_torneo1" />
+
+    <TextView
+        android:id="@+id/tv_juego2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/orbitron_regular"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tv_juego1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_torneo1" />
+
+    <Button
+        android:id="@+id/btn_ver_brackets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/morado_electrico"
+        android:text="@string/btn_ver_brackets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_editar_torneo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/morado_electrico"
+        android:text="@string/btn_editar_torneo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ver_brackets"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fecha1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/orbitron_bold"
+        android:text="Fecha de Creación: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_estado1" />
+
+    <TextView
+        android:id="@+id/tv_fecha2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="TextView"
+        android:fontFamily="@font/orbitron_regular"
+        app:layout_constraintStart_toEndOf="@+id/tv_fecha1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_estado1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

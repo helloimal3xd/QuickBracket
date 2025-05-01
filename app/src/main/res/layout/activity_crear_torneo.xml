@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/tv_nombre_torneo"
+        android:id="@+id/tv_torneo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_torneo" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_torneo1" />
 
     <TextView
         android:id="@+id/tv_seleccion_juego"
