@@ -34,7 +34,7 @@ class CrearTorneoActivity: AppCompatActivity() {
         val userId = currentUser?.uid
 
         torneoId = intent.getStringExtra("torneoId") ?: ""
-        esEdicion = torneoId != null
+        esEdicion = !torneoId.isNullOrEmpty()
 
 
         val juegosAdapter = ArrayAdapter.createFromResource(
@@ -110,7 +110,7 @@ class CrearTorneoActivity: AppCompatActivity() {
                         finish()
                     }
                     .addOnFailureListener {
-                        Toast.makeText(this, "Error al actualizar", Toast.LENGTH_SHORT).show()
+                        makeText(this, "Error al actualizar", Toast.LENGTH_SHORT).show()
                     }
             } else {
 
