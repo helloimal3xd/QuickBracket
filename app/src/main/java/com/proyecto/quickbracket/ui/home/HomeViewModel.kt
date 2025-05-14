@@ -20,7 +20,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         cargarTorneos()
     }
 
-    private fun cargarTorneos() {
+    fun cargarTorneos() {
         val usuarioActual = auth.currentUser
 
         db.collection("torneos")

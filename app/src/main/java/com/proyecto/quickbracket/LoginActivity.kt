@@ -3,6 +3,7 @@ package com.proyecto.quickbracket
 import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -49,15 +50,24 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginUser(email: String, password: String) {
+        binding.progressBar.visibility = View.VISIBLE
+        binding.btnLogin.isEnabled = false
+        binding.btnRegistro.isEnabled = false
+
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful){
+                binding.progressBar.visibility = View.GONE
+                binding.btnLogin.isEnabled = true
+                binding.btnRegistro.isEnabled = true
+
+                if (task.isSuccessful) {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
-                    Toast.makeText(this, "Error al iniciar sesion", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show()
                 }
             }
     }
+
 }

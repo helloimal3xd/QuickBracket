@@ -7,109 +7,149 @@
     android:background="@color/azul_profundo"
     android:padding="24dp">
 
-    <TextView
-        android:id="@+id/tvTituloPrincipal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/orbitron_bold"
-        android:gravity="center"
-        android:text="¿Necesitas una guía para las reglas de torneo?"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvSubtitulo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:gravity="center"
-        android:text="no te preocupes,\nselecciona el juego y te enviaremos a un manual\ncon reglas que te pueden ayudar!"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:fontFamily="@font/orbitron_regular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTituloPrincipal" />
-
-    <TextView
-        android:id="@+id/tvInstruccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Selecciona el juego que necesitas ayuda :)"
-        android:textColor="#ADD8E6"
-        android:textSize="14sp"
-        android:fontFamily="@font/orbitron_bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubtitulo" />
-
-    <Spinner
-        android:id="@+id/spinnerJuegosReglas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:backgroundTint="#FFFFFF"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvInstruccion" />
-
-    <Spinner
-        android:id="@+id/SpinnerDetalles"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFFFFF"
-        android:spinnerMode="dropdown"
-        android:layout_marginTop="20dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerJuegosReglas" />
-
-    <ImageView
-        android:id="@+id/logoReglas"
-        android:layout_width="75dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/logo_removebg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_reglas" />
-
-    <TextView
-        android:id="@+id/tvNota"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:gravity="center"
-        android:text="psst... si tu juego no está, no te preocupes,\npróximamente iremos metiendo más juegos :3"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp"
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="889dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_reglas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="134dp"
-        android:text="Ver Reglas"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.732"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SpinnerDetalles" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
+
+            <TextView
+                android:id="@+id/tvTituloPrincipal"
+                android:layout_width="360dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="72dp"
+                android:fontFamily="@font/orbitron_bold"
+                android:gravity="center"
+                android:text="¿Necesitas una guía para las reglas de torneo?"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.489"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubtitulo"
+                android:layout_width="361dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/orbitron_regular"
+                android:gravity="center"
+                android:text="no te preocupes,\nselecciona el juego y te enviaremos a un manual\ncon reglas que te pueden ayudar!"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTituloPrincipal" />
+
+            <TextView
+                android:id="@+id/tvInstruccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/orbitron_bold"
+                android:text="Selecciona el juego que necesitas ayuda :)"
+                android:textColor="#ADD8E6"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubtitulo" />
+
+            <Spinner
+                android:id="@+id/spinnerJuegosReglas"
+                android:layout_width="361dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#FFFFFF"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInstruccion" />
+
+            <Spinner
+                android:id="@+id/SpinnerDetalles"
+                android:layout_width="357dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FFFFFF"
+                android:spinnerMode="dropdown"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerJuegosReglas" />
+
+            <TextView
+                android:id="@+id/tvNota"
+                android:layout_width="380dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="psst... si tu juego no está, no te preocupes,\npróximamente iremos metiendo más juegos :3"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_reglasSubidas" />
+
+            <Button
+                android:id="@+id/btn_reglas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="159dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="134dp"
+                android:text="Ver Reglas"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SpinnerDetalles" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="285dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/orbitron_regular"
+                android:gravity="center"
+                android:text="O si tienes tus propias reglas y quieres tenerlas a la mano, puedes subirlas!"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_reglas" />
+
+            <Button
+                android:id="@+id/btn_subir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="subir reglas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <Button
+                android:id="@+id/btn_reglasSubidas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Ver reglas subidas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_subir" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

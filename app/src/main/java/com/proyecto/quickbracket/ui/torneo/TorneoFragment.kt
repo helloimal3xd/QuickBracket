@@ -65,4 +65,9 @@
             super.onDestroyView()
             _binding = null
         }
+
+        override fun onResume() {
+            super.onResume()
+            torneoViewModel.cargarTorneos()
+        }
     }

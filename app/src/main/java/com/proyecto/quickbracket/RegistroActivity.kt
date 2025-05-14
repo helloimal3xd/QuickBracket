@@ -3,6 +3,7 @@ package com.proyecto.quickbracket
 import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -29,6 +30,7 @@ class RegistroActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         binding.btnRegistro.setOnClickListener {
+            binding.progressBar.visibility = View.VISIBLE
             val email = binding.etCorreo.text.toString()
             val password = binding.etContrasena.text.toString()
             val password2 = binding.etContrasena2.text.toString()
@@ -53,6 +55,7 @@ class RegistroActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
 
                 if (task.isSuccessful) {
+                    binding.progressBar.visibility = View.GONE
                     Toast.makeText(this, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, LoginActivity::class.java))
                     finish()

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "39233973340",
+    "project_id": "quickbracket-6fcd4",
+    "storage_bucket": "quickbracket-6fcd4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39233973340:android:025d55e3a5f791489e4a99",
+        "android_client_info": {
+          "package_name": "com.proyecto.quickbracket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGXj8uutMXT_4xTf833dWkfiSuLyAOkM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
