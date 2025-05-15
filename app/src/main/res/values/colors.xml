@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- === COLORES PRINCIPALES DEL SISTEMA (MATERIAL) === -->
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- === COLORES NEUTROS === -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gris">#606770</color>
+
+    <!-- === TEMA AZUL === -->
+    <color name="azul_oscuro">#1A1A2E</color>       <!-- colorPrimary -->
+    <color name="azul_profundo">#0F3460</color>     <!-- colorSecondary -->
+    <color name="azul_negro">#141E30</color>        <!-- colorPrimaryVariant -->
     <color name="morado_electrico">#6A2C70</color>
+    <color name="azul_bg">#366cad</color>
+
+    <!-- === TEMA ROJO === -->
+    <color name="rojo">#EF4444</color>              <!-- colorPrimary -->
+    <color name="rojo_oscuro">#991B1B</color>       <!-- colorPrimaryVariant -->
+    <color name="naranja">#F97316</color>           <!-- colorSecondary -->
+    <color name="rojo_status">#DC2626</color>       <!-- statusBarColor -->
+
+    <!-- === TEMA VERDE (AGREGADO) === -->
+    <color name="verde_claro">#10B981</color>       <!-- colorPrimary -->
+    <color name="verde_oscuro">#065F46</color>      <!-- colorPrimaryVariant -->
+    <color name="verde_lima">#34D399</color>        <!-- colorSecondary -->
+    <color name="verde_status">#047857</color>      <!-- statusBarColor -->
+
+    <!-- === COLORES PERSONALIZADOS === -->
     <color name="verde_neon">#39FF14</color>
     <color name="rojo_neon">#E94560</color>
-    <color name="azul_oscuro">#1A1A2E</color>
-    <color name="azul_profundo">#0F3460</color>
-    <color name="azul_negro">#141E30</color>
-    <color name="gris">#606770</color>
     <color name="logo_pink">#570037</color>
     <color name="logo_blue">#004B57</color>
 </resources>

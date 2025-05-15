@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo_removebg"
         android:supportsRtl="true"
-        android:theme="@style/Theme.QuickBracket"
+        android:theme="@style/Theme.QuickBracket.azul"
         tools:targetApi="31">
         <activity
             android:name=".LoginActivity"
@@ -29,39 +29,39 @@
 
         <activity android:name=".RegistroActivity"
             android:exported="true"
-            android:theme="@style/Theme.QuickBracket"
+            android:theme="@style/Theme.QuickBracket.azul"
             />
 
         <activity android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.QuickBracket"
+            android:theme="@style/Theme.QuickBracket.azul"
             />
 
         <activity
             android:name=".CrearTorneoActivity"
             android:exported="true"
-            android:theme="@style/Theme.QuickBracket"
+            android:theme="@style/Theme.QuickBracket.azul"
             />
 
         <activity
             android:name=".RegistrarEquiposActivity"
             android:exported="true"
-            android:theme="@style/Theme.QuickBracket"
+            android:theme="@style/Theme.QuickBracket.azul"
             tools:ignore="Instantiatable" />
 
         <activity android:name=".ui.brackets.BracketActivity"
             android:exported="true"
-            android:theme="@style/Theme.QuickBracket"
+            android:theme="@style/Theme.QuickBracket.azul"
             tools:ignore="Instantiatable" />
 
         <activity android:name=".DetalleTorneoActivity"
             android:exported="true"
-            android:theme="@style/Theme.QuickBracket"
+            android:theme="@style/Theme.QuickBracket.azul"
             tools:ignore="Instantiatable" />
 
         <activity android:name=".MisReglamentosActivity"
             android:exported="true"
-            android:theme="@style/Theme.QuickBracket"
+            android:theme="@style/Theme.QuickBracket.azul"
             tools:ignore="Instantiatable" />
 
 

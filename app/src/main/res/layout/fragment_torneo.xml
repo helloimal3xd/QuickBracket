@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azul_profundo"
+    android:background="?attr/background"
     tools:context=".ui.torneo.TorneoFragment">
 
 

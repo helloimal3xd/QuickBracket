@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.proyecto.quickbracket.CrearTorneoActivity
 import com.proyecto.quickbracket.databinding.FragmentHomeBinding
+import com.proyecto.quickbracket.ui.ThemeUtils
 import com.proyecto.quickbracket.ui.dao.TorneoAdapter
 
 class HomeFragment : Fragment() {
@@ -62,6 +63,15 @@ class HomeFragment : Fragment() {
         binding.btnCrearTorneo.setOnClickListener {
             val intent = Intent(this.context, CrearTorneoActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.btnTema.setOnClickListener {
+            val currentTheme = ThemeUtils.getSavedTheme(requireContext())
+            val nextTheme = ThemeUtils.getNextTheme(currentTheme)
+
+            ThemeUtils.saveTheme(requireContext(), nextTheme)
+
+            requireActivity().recreate()
         }
 
         return root
