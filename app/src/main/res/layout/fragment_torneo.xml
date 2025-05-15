@@ -42,6 +42,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo_finalizados" />
 
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/recyclerFinalizados"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerFinalizados"
+        app:layout_constraintStart_toStartOf="@+id/recyclerFinalizados"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerFinalizados" />
+
     <TextView
         android:id="@+id/titulo_finalizados"
         android:layout_width="wrap_content"
@@ -65,6 +76,17 @@
         app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo_activos" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/recyclerFinalizados"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerActivos"
+        app:layout_constraintStart_toStartOf="@+id/recyclerActivos"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerActivos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

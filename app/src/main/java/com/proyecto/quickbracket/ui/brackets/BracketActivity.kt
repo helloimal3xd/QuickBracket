@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.proyecto.quickbracket.R
 import com.proyecto.quickbracket.databinding.ActivityBracketBinding
+import com.proyecto.quickbracket.ui.ThemeUtils
 import com.proyecto.quickbracket.ui.dao.BracketAdapter
 
 class BracketActivity : AppCompatActivity() {
@@ -18,6 +19,7 @@ class BracketActivity : AppCompatActivity() {
     private val listaBrackets = mutableListOf<Bracket>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(getThemeResId(ThemeUtils.getSavedTheme(this)))
         super.onCreate(savedInstanceState)
         binding = ActivityBracketBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -318,5 +320,13 @@ class BracketActivity : AppCompatActivity() {
             }
         }
         return enfrentamientos
+    }
+
+    private fun getThemeResId(themeName: String): Int {
+        return when (themeName) {
+            ThemeUtils.THEME_ROJO -> R.style.Theme_QuickBracket_Rojo
+            ThemeUtils.THEME_VERDE -> R.style.Theme_QuickBracket_Verde
+            else -> R.style.Theme_QuickBracket_azul
+        }
     }
 }

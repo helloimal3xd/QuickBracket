@@ -125,7 +125,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/morado_electrico"
         android:text="@string/btn_ver_brackets"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -135,7 +134,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/morado_electrico"
         android:text="@string/btn_editar_torneo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_ver_brackets"

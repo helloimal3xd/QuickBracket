@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.proyecto.quickbracket.databinding.ActivityRegistrarEquiposBinding
+import com.proyecto.quickbracket.ui.ThemeUtils
 import com.proyecto.quickbracket.ui.brackets.BracketActivity
 import com.proyecto.quickbracket.ui.dao.Equipo
 import com.proyecto.quickbracket.ui.dao.EquipoAdapter
@@ -28,6 +29,7 @@ class RegistrarEquiposActivity: AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(getThemeResId(ThemeUtils.getSavedTheme(this)))
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrarEquiposBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -134,6 +136,14 @@ class RegistrarEquiposActivity: AppCompatActivity() {
                 LinearLayout.LayoutParams.WRAP_CONTENT
             )
             binding.layoutJugadores.addView(editText)
+        }
+    }
+
+    private fun getThemeResId(themeName: String): Int {
+        return when (themeName) {
+            ThemeUtils.THEME_ROJO -> R.style.Theme_QuickBracket_Rojo
+            ThemeUtils.THEME_VERDE -> R.style.Theme_QuickBracket_Verde
+            else -> R.style.Theme_QuickBracket_azul
         }
     }
 

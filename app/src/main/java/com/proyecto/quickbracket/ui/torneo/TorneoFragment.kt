@@ -33,6 +33,9 @@
 
             torneoViewModel = ViewModelProvider(this).get(TorneoViewModel::class.java)
 
+            binding.progressBar1.visibility = View.VISIBLE
+            binding.progressBar2.visibility = View.VISIBLE
+
             adapterActivos = TorneoAdapter(emptyList())
             adapterFinalizados = TorneoAdapter(emptyList())
 
@@ -48,10 +51,12 @@
             }
 
             torneoViewModel.torneosActivos.observe(viewLifecycleOwner) { lista ->
+                binding.progressBar2.visibility = View.GONE
                 adapterActivos.actualizarLista(lista)
             }
 
             torneoViewModel.torneosFinalizados.observe(viewLifecycleOwner) { lista ->
+                binding.progressBar1.visibility = View.GONE
                 adapterFinalizados.actualizarLista(lista)
             }
 

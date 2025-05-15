@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import android.widget.Toast.makeText
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.proyecto.quickbracket.databinding.ActivityCrearTorneoBinding
+import com.proyecto.quickbracket.ui.ThemeUtils
 
 class CrearTorneoActivity: AppCompatActivity() {
 
@@ -23,7 +25,7 @@ class CrearTorneoActivity: AppCompatActivity() {
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        setTheme(getThemeResId(ThemeUtils.getSavedTheme(this)))
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityCrearTorneoBinding.inflate(layoutInflater)
@@ -72,18 +74,20 @@ class CrearTorneoActivity: AppCompatActivity() {
         }
 
         binding.btnSiguiente.setOnClickListener {
-
+            binding.progressBar.visibility = View.VISIBLE
             val nombreTorneo = binding.etNombreTorneo.text.toString()
             val juegoSeleccionado = binding.spinnerJuegos.selectedItem.toString()
             val cantidadJugadores =
                 binding.spinnerJugadores.selectedItem.toString().toIntOrNull() ?: 0
 
             if (nombreTorneo.isEmpty()) {
+                binding.progressBar.visibility = View.GONE
                 binding.etNombreTorneo.error = "Ingrese un nombre"
                 return@setOnClickListener
             }
 
             if (cantidadJugadores <= 0) {
+                binding.progressBar.visibility = View.GONE
                 makeText(
                     this,
                     "Ingrese una cantidad válida de jugadores",
@@ -104,6 +108,7 @@ class CrearTorneoActivity: AppCompatActivity() {
             if (esEdicion) {
                 db.collection("torneos").document(torneoId!!).update(torneoData)
                     .addOnSuccessListener {
+                        binding.progressBar.visibility = View.GONE
                         Toast.makeText(this, "Torneo actualizado correctamente", Toast.LENGTH_SHORT)
                             .show()
                         setResult(RESULT_OK)
@@ -117,6 +122,7 @@ class CrearTorneoActivity: AppCompatActivity() {
                 db.collection("torneos")
                     .add(torneoData)
                     .addOnSuccessListener { documentReference ->
+                        binding.progressBar.visibility = View.GONE
                         makeText(this, "Torneo creado con exito :)", Toast.LENGTH_SHORT).show()
 
                         val intent = Intent(this, RegistrarEquiposActivity::class.java).apply {
@@ -128,6 +134,7 @@ class CrearTorneoActivity: AppCompatActivity() {
                         startActivity(intent)
                     }
                     .addOnFailureListener { e ->
+                        binding.progressBar.visibility = View.GONE
                         Log.e("CrearTorneo", "Error al crear torneo", e)
                         Toast.makeText(
                             this,
@@ -137,6 +144,14 @@ class CrearTorneoActivity: AppCompatActivity() {
                     }
             }
 
+        }
+    }
+
+    private fun getThemeResId(themeName: String): Int {
+        return when (themeName) {
+            ThemeUtils.THEME_ROJO -> R.style.Theme_QuickBracket_Rojo
+            ThemeUtils.THEME_VERDE -> R.style.Theme_QuickBracket_Verde
+            else -> R.style.Theme_QuickBracket_azul
         }
     }
 }

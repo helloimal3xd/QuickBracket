@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
+import com.proyecto.quickbracket.ui.ThemeUtils
 
 class MisReglamentosActivity : AppCompatActivity() {
 
@@ -19,6 +20,7 @@ class MisReglamentosActivity : AppCompatActivity() {
     private val listaReglamentos = mutableListOf<Reglamento>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(getThemeResId(ThemeUtils.getSavedTheme(this)))
         super.onCreate(savedInstanceState)
         binding = ActivityMisReglasBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -68,6 +70,14 @@ class MisReglamentosActivity : AppCompatActivity() {
             startActivity(intent)
         } catch (e: Exception) {
             Toast.makeText(this, "No se pudo abrir el archivo", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun getThemeResId(themeName: String): Int {
+        return when (themeName) {
+            ThemeUtils.THEME_ROJO -> R.style.Theme_QuickBracket_Rojo
+            ThemeUtils.THEME_VERDE -> R.style.Theme_QuickBracket_Verde
+            else -> R.style.Theme_QuickBracket_azul
         }
     }
 }
